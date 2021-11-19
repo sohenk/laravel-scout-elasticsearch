@@ -13,11 +13,13 @@ trait ElasticsearchClientTrait
      */
     public function getElasticsearchClient()
     {
-        $hosts = [
-            'host' => config('scout.elasticsearch.host'),
-            'port' => config('scout.elasticsearch.port'),
-            'scheme' => config('scout.elasticsearch.scheme'),
-        ];
+        // $hosts = [
+        //     'host' => config('scout.elasticsearch.host'),
+        //     'port' => config('scout.elasticsearch.port'),
+        //     'scheme' => config('scout.elasticsearch.scheme'),
+        // ];
+        //修改支持集群
+        $hosts = config('scout.elasticsearch.hosts');
         $user = config('scout.elasticsearch.user');
         $pass = config('scout.elasticsearch.pass');
 
@@ -30,7 +32,7 @@ trait ElasticsearchClientTrait
         }
 
         $client = ClientBuilder::create()
-            ->setHosts([$hosts])
+            ->setHosts($hosts)
             ->build();
 
         return $client;
