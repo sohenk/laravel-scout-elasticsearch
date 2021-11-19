@@ -1,10 +1,10 @@
 <?php
 
-namespace Baijunyao\LaravelScoutElasticsearch;
+namespace Sohenk\LaravelScoutElasticsearch;
 
 use Laravel\Scout\EngineManager;
 use Illuminate\Support\ServiceProvider;
-use Baijunyao\LaravelScoutElasticsearch\Engine\ElasticsearchEngine;
+use Sohenk\LaravelScoutElasticsearch\Engine\ElasticsearchEngine;
 
 class ElasticsearchServiceProvider extends ServiceProvider
 {

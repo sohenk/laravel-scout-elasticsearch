@@ -1,11 +1,11 @@
 <?php
 
-namespace Baijunyao\LaravelScoutElasticsearch\Engine;
+namespace Sohenk\LaravelScoutElasticsearch\Engine;
 
 use Laravel\Scout\Builder;
 use Laravel\Scout\Engines\Engine;
 use Illuminate\Database\Eloquent\Collection;
-use Baijunyao\LaravelScoutElasticsearch\ElasticsearchClientTrait;
+use Sohenk\LaravelScoutElasticsearch\ElasticsearchClientTrait;
 
 class ElasticsearchEngine extends Engine
 {
